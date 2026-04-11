@@ -1,7 +1,10 @@
+ import { fetchphots } from "./API/mediaApi";
  const App = () =>{
+
   return(
-    <div>
-      <h1 className="bg-red-500">hello</h1>
+    <div className="h-screen w-full  bg-black">
+      <button onClick={()=>fetchphots("cat") } className="bg-green-300">Get request</button>
+
     </div>
   )
 }
