@@ -1,9 +1,13 @@
- import { fetchphots } from "./API/mediaApi";
+import { fetchPhotos, fetchVideo } from "./API/mediaApi"
  const App = () =>{
 
   return(
     <div className="h-screen w-full  bg-black">
-      <button onClick={()=>fetchphots("cat") } className="bg-green-300">Get request</button>
+      <button onClick={async ()=> {
+        const data = await fetchPhotos('cat')
+
+        console.log(data)
+      } } className="bg-green-300">Get request</button>
 
     </div>
   )
